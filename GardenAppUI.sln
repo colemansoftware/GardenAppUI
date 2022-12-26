@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GardenAppUI", "GardenAppUI\GardenAppUI.csproj", "{8EE4C867-0AC4-40C0-A0B0-1C38A720D623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLibrary", "..\DataAccessLibrary\DataAccessLibrary.csproj", "{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EE4C867-0AC4-40C0-A0B0-1C38A720D623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE4C867-0AC4-40C0-A0B0-1C38A720D623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE4C867-0AC4-40C0-A0B0-1C38A720D623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE4C867-0AC4-40C0-A0B0-1C38A720D623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6397CB25-763E-4862-AF33-591E953F30D7}
+	EndGlobalSection
+EndGlobal
