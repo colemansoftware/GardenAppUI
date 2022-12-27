@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccessLibrary;
+
+
 
 namespace GardenAppUI
 {
@@ -29,6 +32,9 @@ namespace GardenAppUI
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+            services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+            services.AddTransient<IPlantsData, PlantsData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

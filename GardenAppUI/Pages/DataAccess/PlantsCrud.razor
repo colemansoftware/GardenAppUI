@@ -1,7 +1,74 @@
 ﻿@page "/DataAccess/PlantsCrud"
+@*this is where the dataaccess is located*@
+@using DataAccessLibrary
+@using DataAccessLibrary.Models
+@using GardenAppUI.Models
 
-<h3>PlantsCrud</h3>
+
+@*database*@
+@inject IPlantsData _db
+
+<h1>Plant Crud Page</h1>
+
+<h4>Insert New Plant</h4>
+<EditForm Model="@newPlant" OnValidSubmit="@InsertPlant">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="plantname" @bind-Value="newPlant.PlantName" />
+    <InputText id="plantdescription" @bind-Value="newPlant.PlantDescription" />
+    <InputText id="sunlighttime" @bind-Value="newPlant.SunlightTime" />
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+<h4>Current Plants</h4>
+@if (plants is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Plant Name</th>
+                <th>Plant Description</th>
+                <th>Sunlight time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pl in plants)
+            {
+                <tr>
+                    <td>@pl.PlantName</td>
+                    <td>@pl.PlantDescription</td>
+                    <td>@pl.SunlightTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 @code {
+    private List<PlantModel> plants;
+    private DisplayPlantModel newPlant = new DisplayPlantModel();
 
+    protected override async Task OnInitializedAsync()
+    {
+        plants = await _db.GetPlants();
+    }
+
+    private async Task InsertPlant() {
+        PlantModel p = new PlantModel
+        {
+            PlantName = newPlant.PlantName,
+            PlantDescription = newPlant.PlantDescription,
+            SunlightTime = newPlant.SunlightTime
+        };
+
+        await _db.InsertPlant(p);
+
+        plants.Add(p);
+        newPlant = new DisplayPlantModel();
+    }
 }
