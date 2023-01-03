@@ -26,16 +26,16 @@ namespace GardenAppUI.Models
         [Required]
         [StringLength(50, ErrorMessage = "species Name is too long.")]
         [MinLength(3, ErrorMessage = "species Name is too short.")]
-        public string species { get; set; }
+        public string Species { get; set; }
 
         [Required]
         [StringLength(250, ErrorMessage = "watering_schedule is too long.")]
         [MinLength(3, ErrorMessage = "watering_schedule is too short.")]
-        public string watering_schedule { get; set; }
+        public string Watering_schedule { get; set; }
 
         [Required]
         [StringLength(250, ErrorMessage = "fertilizing_schedule is too long.")]
         [MinLength(3, ErrorMessage = "fertilizing_schedule is too short.")]
-        public string fertilizing_schedule { get; set; }
+        public string Fertilizing_schedule { get; set; }
     }
 }

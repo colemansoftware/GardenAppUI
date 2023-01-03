@@ -17,7 +17,7 @@ namespace DataAccessLibrary
 
         public Task<List<PlantModel>> GetPlants()
         {
-            string sql = "select * from dbo.Plants";
+            string sql = "select * from dbo.plants";
 
             return _db.LoadData<PlantModel, dynamic>(sql, new { });
             
@@ -25,8 +25,8 @@ namespace DataAccessLibrary
 
         public Task InsertPlant(PlantModel plant)
         {
-            string sql = @"insert into dbo.Plants (PlantName, PlantDescription, SunlightTime, species, watering_schedule, fertilizing_schedule)
-                           values (@PlantName, @PlantDescription, @SunlightTime, @species, @watering_schedule, @fertilizing_schedule);";
+            string sql = @"insert into dbo.plants (plantName, plantDescription, sunlightTime, species, watering_schedule, fertilizing_schedule)
+                           values (@PlantName, @PlantDescription, @SunlightTime, @Species, @Watering_schedule, @Fertilizing_schedule);";
 
             return _db.SaveData(sql, plant);
         }

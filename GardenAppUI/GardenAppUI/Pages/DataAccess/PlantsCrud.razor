@@ -17,9 +17,9 @@
     <InputText id="plantname" @bind-Value="newPlant.PlantName" />
     <InputText id="plantdescription" @bind-Value="newPlant.PlantDescription" />
     <InputText id="sunlighttime" @bind-Value="newPlant.SunlightTime" />
-    <InputText id="species" @bind-Value="newPlant.species" />
-    <InputText id="watering_schedule" @bind-Value="newPlant.watering_schedule" />
-    <InputText id="fertilizing_schedule" @bind-Value="newPlant.fertilizing_schedule" />
+    <InputText id="species" @bind-Value="newPlant.Species" />
+    <InputText id="watering_schedule" @bind-Value="newPlant.Watering_schedule" />
+    <InputText id="fertilizing_schedule" @bind-Value="newPlant.Fertilizing_schedule" />
 
     <button type="submit" class="btn btn-primary">Submit</button>
 </EditForm>
@@ -33,7 +33,7 @@ else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>plant_id</th>
+                <th>Plant_id</th>
                 <th>Plant Name</th>
                 <th>Plant Description</th>
                 <th>Sunlight time</th>
@@ -46,13 +46,13 @@ else
             @foreach (var pl in plants)
             {
                 <tr>
-                    <td>@pl.plant_id</td>
+                    <td>@pl.Plant_id</td>
                     <td>@pl.PlantName</td>
                     <td>@pl.PlantDescription</td>
                     <td>@pl.SunlightTime</td>
-                    <td>@pl.species</td>
-                    <td>@pl.watering_schedule</td>
-                    <td>@pl.fertilizing_schedule</td>
+                    <td>@pl.Species</td>
+                    <td>@pl.Watering_schedule</td>
+                    <td>@pl.Fertilizing_schedule</td>
                 </tr>
             }
         </tbody>
@@ -74,9 +74,9 @@ else
             PlantName = newPlant.PlantName,
             PlantDescription = newPlant.PlantDescription,
             SunlightTime = newPlant.SunlightTime,
-            species = newPlant.species,
-            watering_schedule = newPlant.watering_schedule,
-            fertilizing_schedule = newPlant.fertilizing_schedule
+            Species = newPlant.Species,
+            Watering_schedule = newPlant.Watering_schedule,
+            Fertilizing_schedule = newPlant.Fertilizing_schedule
         };
 
         await _db.InsertPlant(p);

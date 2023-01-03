@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GardenAppUI", "GardenAppUI\GardenAppUI.csproj", "{8EE4C867-0AC4-40C0-A0B0-1C38A720D623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GardenAppUI", "GardenAppUI\GardenAppUI.csproj", "{8EE4C867-0AC4-40C0-A0B0-1C38A720D623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLibrary", "..\DataAccessLibrary\DataAccessLibrary.csproj", "{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLibrary", "..\DataAccessLibrary\DataAccessLibrary.csproj", "{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLDatabase", "SQLDatabase\SQLDatabase.sqlproj", "{B249162D-ABE9-4A6D-9958-7A39D97F4016}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5025210-D1D7-40E5-8C6C-1A8D939ACEAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B249162D-ABE9-4A6D-9958-7A39D97F4016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B249162D-ABE9-4A6D-9958-7A39D97F4016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B249162D-ABE9-4A6D-9958-7A39D97F4016}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B249162D-ABE9-4A6D-9958-7A39D97F4016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B249162D-ABE9-4A6D-9958-7A39D97F4016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B249162D-ABE9-4A6D-9958-7A39D97F4016}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
