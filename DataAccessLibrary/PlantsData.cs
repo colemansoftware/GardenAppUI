@@ -25,8 +25,8 @@ namespace DataAccessLibrary
 
         public Task InsertPlant(PlantModel plant)
         {
-            string sql = @"insert into dbo.Plants (PlantName, PlantDescription, SunlightTime)
-                           values (@PlantName, @PlantDescription, @SunlightTime);";
+            string sql = @"insert into dbo.Plants (PlantName, PlantDescription, SunlightTime, species, watering_schedule, fertilizing_schedule)
+                           values (@PlantName, @PlantDescription, @SunlightTime, @species, @watering_schedule, @fertilizing_schedule);";
 
             return _db.SaveData(sql, plant);
         }
